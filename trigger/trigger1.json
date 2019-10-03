@@ -1,0 +1,23 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "GetMetaDataToForEach",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/mycontainer/blobs/",
+			"scope": "/subscriptions/16d99611-ef53-49c3-8732-4ecb4ba8d317/resourceGroups/ArjunRG/providers/Microsoft.Storage/storageAccounts/arjunacc",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
